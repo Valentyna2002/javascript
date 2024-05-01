@@ -9,8 +9,8 @@ let h= 123
 let j = 3.14
 let k = 2.7
 let x = 16
-let z = !!a;
-let v =!!null;
+let z = !!true;
+let v = !!false;
 console.log(a);
 console.log(b);
 console.log(c);
