@@ -159,11 +159,11 @@ let weather=[
 let x= 5;
 if (x !== 0)
 {console.log('True')}
-else {console.log('False')};
+else {console.log('False')}
 let a = 1;
 if (a !== 0)
 {console.log('True')}
-else {console.log('False')};
+else {console.log('False')}
 let b= 0;
 if (b !== 0)
 {console.log('True')}
@@ -189,9 +189,9 @@ console.log('part4');
 // - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
 let day = 15
 if (day>=1 && day<=10)
-{console.log('first')};
+{console.log('first')}
 if (day>10 && day<=20)
-{console.log('second')};
+{console.log('second')}
 if (day>20 && day<=31)
 {console.log('third')}
 
