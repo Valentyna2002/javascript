@@ -34,19 +34,19 @@ let book4  = {
     title:'Harry Pother',
     pageCount:248,
     genre:'fantasy',
-    autors: ['Joanne Rowling', 58],
+    autors: {name:'Joanne Rowling',age:58},
 }
 let book5  = {
     title:'The Little Prince',
     pageCount:64,
     genre:'tale',
-    autors: ['Frances Hodgson',75]
+    autors: {name:'Frances Hodgson',age:75},
 }
 let book6  = {
     title:'Pride and Prejudice',
     pageCount:384,
     genre:'novel',
-    autors:['Jane Austen',42]
+    autors:{name:'Jane Austen',age:42},
 }
 // - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
 
@@ -218,6 +218,8 @@ switch (schedule){
         break
     case 7:
         console.log('Sunday');
+        break;
+    default:console.log('error')
 }
 
 //     - Користувач вводить або має два числа.
@@ -232,8 +234,9 @@ else console.log(number2)
 //
 //     - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
 //         буде присвоювати змінній х значення "default"  якщо ви намагаєтесь присвоїти в неї falsy-значення (хибноподібні, тобто ті, які приводиться до false, а це 0 null undefined і тд).
-let x2= 0
-if (!x2) {console.log('default')}
+let x2= '0'
+x2 = x2 || 'default'
+if (!x2) {console.log(x2)}
 //
 //     - з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray. За допомоги іф перевірити кожен його елемент на тривалість навчання. У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
 let coursesAndDurationArray = [
