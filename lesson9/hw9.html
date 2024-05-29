@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #f1{
+            margin: 20px;
+            font-size: 20px;
+        }
+        input{
+            margin-bottom: 10px;
+            font-size: 15px;
+            height: 40px;
+            width: 200px;
+        }
+        #buttonF1{
+            height: 40px;
+            width: 200px;
+            border-radius: 20px;
+            background-color: lightblue;
+            font-size: 20px;
+        }
+        #usersBlock{
+            border: 1px solid #ccc;
+            margin: 20px;
+            font-size: 20px;
+        }
+        #number{
+            margin: 20px;
+            font-size: 30px;
+        }
+        #list{
+            margin-top: 40px;
+            margin: 20px;
+            font-size: 25px;
+        }
+        button{
+            margin-left: 20px;
+            height: 40px;
+            width: 100px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            background-color: lightblue}
+        table{
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+        }
+        #priceDiv{
+            font-size: 150px;
+        }
+       
+        
+    </style>
+    
+</head>
+<body>
+<form id="f1">
+    <label for="name">Ім'я:</label><br>
+    <input id="name" name="name" type="text"><br>
+    <label for="surname">Прізвище:</label><br>
+    <input id="surname" name="surname" type="text"><br>
+    <label for="age">Вік:</label><br>
+    <input id="age" name="age" type="number"><br>
+    <button id="buttonF1">Відправити</button>
+</form>
+<div  id="usersBlock"></div>
+<hr>
+<div id="number">1</div>
+<hr>
+
+<div id="list"> </div>
+
+    <button id="prevButton">Prev</button>
+    <button id="nextButton">Next</button>
+<hr>
+<div>
+<p id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, temporibus?</p>
+<button id="buttonByText"> Hide Text </button>
+</div>
+<br>
+
+
+<h2>Введіть ваш вік </h2>
+<input id="age2" name="age" type="number" min="0"><br>
+<button id="checkAge">Check</button>
+<h1 id="welcome"></h1>
+
+<hr>
+
+<h4>Lines</h4>
+<input id="lines" name="lines" type="number" min="1"><br>
+<h4>Column</h4>
+<input id="column" name="column" type="number" min="1"><br>
+<h4>Text</h4>
+<input id="textContent" name="textContent" type="text"><br>
+<button id="buttonCreate">Create</button>
+<div id="divForTable"></div>
+
+<hr>
+
+<div id="priceDiv"> 100грн </div>
+
+
+
+<script src="hw9.js">
+
+</script>
+</body>
+</html>
