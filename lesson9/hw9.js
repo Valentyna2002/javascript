@@ -143,6 +143,10 @@ buttonCreate.addEventListener('click',function (){
     }
     let divForTable = document.getElementById('divForTable')
     divForTable.appendChild(table)
+
+    document.getElementById('lines').value = '';
+    document.getElementById('column').value = '';
+    document.getElementById('textContent').value = '';
 })
 
 // *** (подібне було вище, але...будьте уважні в другій частині) створити сторінку з довільним блоком, в середині якого є значення "100грн"

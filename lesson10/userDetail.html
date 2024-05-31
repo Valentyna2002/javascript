@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="userDetails"></div>
+<script>
+    fetch(`https://jsonplaceholder.typicode.com/users/${users.id}`)
+        .then(res => res.json())
+        .then(user =>{
+            
+            user.id = userElement
+            let userInfo = document.createElement('div')
+            userInfo.innerHTML = `<strong>User ID:</strong>${userElement.id}
+                <strong>User Name:</strong>${userElement.username}
+                <strong>Username:</strong>${userElement.id}
+                <strong>email:</strong>${userElement.email}
+                <strong>address:</strong><ul>
+                <li>street:</li>${userElement.address.street}
+                <li>city:</li>${userElement.address.city}
+                <li>suite:</li>${userElement.address.suite}
+                <li>zipcode</li>${userElement.address.zipcode}
+                <li><strong>geo:</strong></li><ul>
+                <li>lat:</li>${userElement.address.geo.lat}
+                <li>lng:</li>${userElement.address.geo.lng}</ul></ul>
+                <strong>Phone:</strong>${userElement.phone}
+                <strong>website:</strong>${userElement.website}
+                <strong>company:</strong><ul>
+                <li>name:</li>${userElement.company.name}
+                <li>catch phrase</li>${userElement.company.catchPhrase}
+                <li>name:</li>${userElement.company.bs}</ul>
+               
+       ` })
+</script>
+</body>
+</html>
