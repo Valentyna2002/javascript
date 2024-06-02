@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .details {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .details ul {
+            display: flex;
+            }
+        .details li{
+            margin-left: 35px;
+        }
+        
+        .details div {
+            border: 1px  solid #343434;
+            background-color: cornsilk;
+            width: 90%;
+            font-size: 20px;
+            text-align: left;
+            box-sizing: border-box;
+            padding:20px;
+            margin: 50px 0 20px 0;
+        }
+       
+        .details a{
+            width: 90%;
+            margin: 30px 0 50px 0 ;
+            height: 80px;
+            font-size: 50px;
+            color: black;
+            background-color: rgba(178, 217, 255, 0.85);
+        }
+        .details a:hover {
+            background-color: rgba(84, 148, 220, 0.75);
+        }
+        u{
+        margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="details"></div>
+<script>
+    let urlParam = new URLSearchParams(window.location.search).get('id')
+
+
+    let  details = document.getElementsByClassName('details')[0]
+    fetch(`http://jsonplaceholder.typicode.com/users/${urlParam}`)
+        .then(response => response.json())
+        .then((user)=> {
+            let userInfo = document.createElement('div')
+            userInfo.innerHTML = `<p><strong>User ID:</strong> ${user.id} <br>
+                    <strong>User Name:</strong> ${user.name}<br>
+                    <strong>Username:</strong> ${user.username}<br>
+                    <strong>Email:</strong> ${user.email}<br>
+                    <strong>Address:</strong><br>
+                    <ul>
+                        <li><u>Street:</u> ${user.address.street}
+                        <li><u>City:</u> ${user.address.city}
+                        <li><u>Suite:</u> ${user.address.suite}
+                        <li><u>Zipcode:</u> ${user.address.zipcode}
+                        <li><strong><u>Geo:</u> </strong>
+                                <u>Latitude:</u>    ${user.address.geo.lat}
+                                <u>Longitude: </u>   ${user.address.geo.lng}
+                            
+                    </ul>
+                    <strong>Phone:</strong> ${user.phone}<br>
+                    <strong>Website:</strong> ${user.website}<br>
+                    <strong>Company:</strong><br>
+                    <ul>
+                        <li><u>Name:</u> ${user.company.name}
+                        <li><u>Catch Phrase:</u> ${user.company.catchPhrase}
+                        <li><u>Business Services:</u> ${user.company.bs}
+                    </ul></p>`
+            // let userButton = document.createElement('button')
+            let postLink = document.createElement('a')
+            postLink.innerText = 'Post of current user'
+            postLink.href = `post-details.html?id=${user.id}`
+            details.append(userInfo,postLink)
+        })
+
+</script>
+</body>
+</html>
